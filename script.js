@@ -1,0 +1,69 @@
+// 
+window.addEventListener('resize', function () {
+    addRequireClass()
+})
+
+// Function for appearing hamburger icon
+function addRequireClass() {
+    if (window.innerWidth < 860) {
+        document.body.classList.add('mobile')
+    } else {
+        document.body.classList.remove('mobile')
+    }
+}
+window.onload = addRequireClass();
+
+
+// Getting and setting of hamburger icon
+let hamburger = document.querySelector('.hamburger')
+let mobileNav = document.querySelector('.nav-list')
+
+let bars = document.querySelectorAll('.hamburger span')
+
+let isActive = false
+
+hamburger.addEventListener('click', function () {
+    mobileNav.classList.toggle('open')
+    if (!isActive) {
+        bars[0].style.transform = 'rotate(45deg)'
+        bars[1].style.opacity = '0'
+        bars[2].style.transform = 'rotate(-45deg)'
+        isActive = true
+    } else {
+        bars[0].style.transform = 'rotate(0)'
+        bars[1].style.opacity = '1'
+        bars[2].style.transform = 'rotate(0)'
+        isActive = false
+    }
+})
+
+// Adding dark/light mode
+let icon = document.getElementById("icon");
+icon.onclick = function () {
+    document.body.classList.toggle("dark-theme")
+    if (document.body.classList.contains("dark-theme")) {
+        icon.src = "images/sun.png"
+    }
+    else {
+        icon.src = "images/moon.png"
+    }
+}
+
+
+// Scrooll to top button
+const btnScrollTop = document.querySelector("#btnScrollToTop")
+
+btnScrollTop.addEventListener("click", function () {
+    // window.scrollTo(0, 0)
+
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth"
+    })
+})
+
+// Code of wow.js library
+new WOW().init();
+
+
