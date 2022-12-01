@@ -17,12 +17,14 @@
     <script defer src="script.js"></script>
     <style>
         .form-container {
-            margin: 8vh auto;
+            margin: 10vh auto;
         }
 
         .form {
             margin: 1rem auto;
-            width: 80%;
+            width: 60%;
+            font-weight: 600;
+
         }
 
 
@@ -42,45 +44,48 @@
         .email,
         .number,
         .faculty {
-            grid-column: 1/span 2;
-            margin: 0 3rem;
+            margin: 0 2rem;
         }
 
         input,
         select {
-            padding: 5px;
+            padding: 8px;
             font-size: 0.8rem;
+            width: 500px;
         }
-
 
 
         button {
-            width: 50%;
+            width: 100%;
             margin: 0 auto;
         }
 
+
+
         @media (max-width:560px) {
 
-            .students-name,
-            .genders,
-            .date-of-birth,
-            .address,
-            .email,
-            .number,
-            .faculty {
-                grid-column: 1/span 2;
-                margin: 0 0rem;
+
+            .form {
+                font-weight: 600;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
 
-            button {
-                grid-column: 1 /span 2;
+            .group-of-forms-element {
+                display: flex;
+                align-items: center;
+                width: 300px;
+                margin: auto;
+            }
+
+            input,
+            select {
+                font-size: 0.8rem;
+                width: 300px;
             }
 
         }
-
-        /* .group-of-forms-element{
-           margin: 1rem auto;
-       } */
     </style>
     <title>Form</title>
 
@@ -128,6 +133,7 @@
     <!-- Scroll to top button start -->
     <button id="btnScrollToTop"><i class="fa-solid fa-arrow-up"></i></button>
     <!-- Scroll to top button end -->
+
     <section class="form-container container wow animate__animated animate__zoomIn">
 
         <div class="form">
@@ -135,54 +141,50 @@
                 <fieldset>
                     <legend>Admission form of RJU</legend>
 
-                    <div class="grid grid-2 group-of-forms-element">
+                    <div
+                        class="flex justify-content-center align-items-center flex-column .flex-warp group-of-forms-element">
                         <div class="students-name">
                             <label for="student-name">Full Name:</label>
+                            <br>
                             <input type="text" name="student-name" id="student-name">
-                        </div>
-
-                        <div class="genders">
-                            <label for="gender">Gender:</label>
-                            <label for="Male">Male</label>
-                            <input type="radio" name="gender" id="male">
-
-                            <label for="female">Female</label>
-                            <input type="radio" name="gender" id="female">
-
-                            <label for="others">Others</label>
-                            <input type="radio" name="gender" id="others">
-
                         </div>
 
                         <div class="date-of-birth">
                             <label for="DOB">Date of Birth:</label>
+                            <br>
                             <input type="datetime-local" name="dob" id="dob">
                         </div>
 
                         <div class="address">
                             <label for="address">Address:</label>
+                            <br>
                             <input type="text" name="address" id="address">
                         </div>
 
                         <div class="email">
                             <label for="email">Email:</label>
+                            <br>
                             <input type="email" name="email" id="email">
                         </div>
 
                         <div class="number">
                             <label for="number">Mobile Numbers:</label>
+                            <br>
                             <input type="number" name="number" id="number">
                         </div>
                         <div class="faculty">
                             <label for="faculty">Faculty:</label>
+                            <br>
                             <select name="faculty" id="faculty">
                                 <option value="science">Science and Technology</option>
                                 <option value="management">Management</option>
                                 <option value="social">Humanities and Social Sciences</option>
                             </select>
                         </div>
-                        <button class="btn" type="submit">Submit</button>
-                        <button class="btn" type="reset">Reset</button>
+                        <div class="flex">
+                            <button class="btn" type="submit">Submit</button>
+                            <button class="btn" type="reset">Reset</button>
+                        </div>
                     </div>
                 </fieldset>
             </form>

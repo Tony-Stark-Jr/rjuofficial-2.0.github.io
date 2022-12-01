@@ -129,10 +129,32 @@ html {
   outline: none;
   cursor: pointer;
   font-size: 1rem;
+  z-index: 999999;
 }
 
 #btnScrollToTop:active {
   background-color: var(--secondary);
+}
+
+.flex {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-warp {
+  flex-wrap: wrap;
 }
 
 /* Utility class End */
@@ -753,15 +775,16 @@ footer h3 {
   }
   /* Footer end */
 
-
   /* Notes page start */
   .subject,
-  .old-questions,.notes,.syllabus {
+  .old-questions,
+  .notes,
+  .syllabus {
     grid-column: 1 / span 4;
-align-items: center;
+    align-items: center;
   }
 
-  .subject{
+  .subject {
     width: 100%;
     background-color: var(--nav-color);
   }
@@ -770,7 +793,8 @@ align-items: center;
     background-color: var(--nav-color);
   }
 
-  .syllabus,.notes {
+  .syllabus,
+  .notes {
     background-color: var(--background);
   }
   /* Notes page end */

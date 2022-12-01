@@ -54,7 +54,7 @@ icon.onclick = function () {
 const btnScrollTop = document.querySelector("#btnScrollToTop")
 
 btnScrollTop.addEventListener("click", function () {
-    // window.scrollTo(0, 0)
+    window.scrollTo(0, 0)
 
     window.scrollTo({
         top: 0,
