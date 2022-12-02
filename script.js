@@ -37,19 +37,6 @@ hamburger.addEventListener('click', function () {
     }
 })
 
-// Adding dark/light mode
-let icon = document.getElementById("icon");
-icon.onclick = function () {
-    document.body.classList.toggle("dark-theme")
-    if (document.body.classList.contains("dark-theme")) {
-        icon.src = "images/sun.png"
-    }
-    else {
-        icon.src = "images/moon.png"
-    }
-}
-
-
 // Scrooll to top button
 const btnScrollTop = document.querySelector("#btnScrollToTop")
 
@@ -61,6 +48,16 @@ btnScrollTop.addEventListener("click", function () {
         left: 0,
         behavior: "smooth"
     })
+})
+
+console.log(btnScrollTop);
+
+window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 100) {
+        btnScrollTop.classList.add("btn-active")
+    } else {
+        btnScrollTop.classList.remove("btn-active")
+    }
 })
 
 // Code of wow.js library
