@@ -22,7 +22,6 @@
 
 ### Features
 * Responsive
-* Light / dark mode toggle
 
 ## Feedback
 If you have any feedback, please open issues
