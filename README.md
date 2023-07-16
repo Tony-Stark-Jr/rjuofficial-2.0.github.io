@@ -2,7 +2,7 @@
 <p align="center">
  <a href="https://rjuofficial-2-0-github-io.vercel.app/?vercelToolbarCode=r_Ln3lH9QDiIVuQ" target="_blank"> <img src="https://github.com/Tony-Stark-Jr/rjuofficial-2.0.github.io/assets/74758608/79e9decf-fce9-4438-9643-b6f1399c8457" width="250"> </a>
 </p>
-  <p align="center">A simple university landing page.</p>
+  <p align="center">A simple university website.</p>
 <p  align="center"><a href="https://rjuofficial-2-0-github-io.vercel.app/?vercelToolbarCode=r_Ln3lH9QDiIVuQ"><b>View demo</b></a></p>
 
 ## About the project
@@ -12,7 +12,7 @@
 </div>
 
 
-<p>This is a simple and responsive landing page of university for only learning and practice purpose.</p>
+<p>This is a simple and responsive website of university for only learning and practice purpose.</p>
 
 ### Technologies & tools used in this projects.
 * HTML5
